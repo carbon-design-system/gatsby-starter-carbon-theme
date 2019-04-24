@@ -73,6 +73,10 @@ This is where we'll document the various utility components as they're added.
 1. [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/)
 1. [MDX](https://mdxjs.com/)
 
-## 🚀 Configuration and Deployment
+## 👻 Configuration and Shadowing
+
+Coming soon!
+
+## 🚀 Deployment
 
 Coming soon!

@@ -1,6 +1,6 @@
 {
   "name": "gatsby-starter-carbon-theme",
-  "version": "0.0.1",
+  "version": "0.2.3",
   "license": "Apache-2.0",
   "scripts": {
     "build": "gatsby build",

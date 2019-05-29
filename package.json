@@ -13,8 +13,8 @@
     "url": "https://github.com/carbon-design-system/gatsby-starter-carbon-theme"
   },
   "dependencies": {
-    "gatsby": "^2.4.2",
-    "gatsby-theme-carbon": "0.4.0",
+    "gatsby": "^2.7.3",
+    "gatsby-theme-carbon": "0.7.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }

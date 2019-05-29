@@ -1,19 +1,29 @@
-- title: Component examples
+- title: Components
   pages:
+    - title: Markdown
+      path: /components/markdown
     - title: Demo
-      path: /component-examples/demo
+      path: /components/demo
+    - title: Grid
+      path: /components/Grid
     - title: DoDontExample
-      path: /component-examples/DoDontExample
+      path: /components/DoDontExample
     - title: Caption
-      path: /component-examples/Caption
+      path: /components/Caption
     - title: Aside
-      path: /component-examples/Aside
+      path: /components/Aside
+    - title: AnchorLinks
+      path: /components/AnchorLinks
+    - title: PageDescription
+      path: /components/PageDescription
     - title: ResourceCard
-      path: /component-examples/ResourceCard
+      path: /components/ResourceCard
     - title: ArticleCard
-      path: /component-examples/ArticleCard
-    # - title: ImageComponent
-    # path: /component-examples/ImageComponent
+      path: /components/ArticleCard
+    - title: FeatureCard
+      path: /components/FeatureCard
+    - title: ImageCard
+      path: /components/ImageCard
 - title: Contributing
   pages:
     - title: Agreement
@@ -28,6 +38,9 @@
       path: /getting-started/about-carbon
     - title: Designers
       path: /getting-started/designers
+- title: Top Level With Tabs
+  pages:
+    - path: /top-level-with-tabs/tab-one
 - title: Resources
   pages:
     - path: /resources

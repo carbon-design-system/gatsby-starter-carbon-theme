@@ -1,5 +1,5 @@
 <h1 align="center">
-  Carbon Design Gatsby Starter
+  Gatsby Theme Carbon
 </h1>
 
 Get started using with the Gatsby Carbon theme which includes all configuration you might need to build a beautiful site inspired by the [Carbon Design System](https://www.carbondesignsystem.com).
@@ -16,11 +16,20 @@ npx gatsby new my-carbon-site https://github.com/carbon-design-system/gatsby-sta
 
 2. **Start developing**
 
-Navigate into your directory and start it up
+Navigate into your directory and start it up using one of the following snippets. You can tell which command to use based on the lock file at the root of your project (`yarn.lock` for yarn and `package-lock.json` for npm).
+
+#### yarn
 
 ```sh
     cd my-carbon-site/
-    gatsby develop
+    yarn develop
+```
+
+#### npm
+
+```sh
+    cd my-carbon-site/
+    npm run develop
 ```
 
 3. **Make some changes!**
@@ -75,7 +84,145 @@ This is where we'll document the various utility components as they're added.
 
 ## 👻 Configuration and Shadowing
 
-Coming soon!
+### Title and Description
+
+To add a title and description to each page, simply provide them to siteMetadata in your `gatsby-config.js` file.
+
+```js
+module.exports = {
+  siteMetadata: {
+    title: 'Gatsby Theme Carbon',
+    description: 'A Gatsby theme for the carbon design system',
+    keywords: 'gatsby,theme,carbon',
+  },
+  __experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+    },
+  ],
+};
+```
+
+### Favicon and Manifest
+
+One of the first configurations should be to override the default manifest options, you can do this in `gatsby-config.js`. Any options you don't set, will be provided by the theme. See the example project.
+
+```js
+siteMetadata: {
+    title: 'Gatsby Theme Carbon',
+  },
+  plugins: [
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Carbon Design Gatsby Theme',
+        short_name: 'Gatsby Theme Carbon',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#0062ff',
+        display: 'browser',
+        icon: './src/images/custom-favicon.png', // defaults to IBM rebus eye
+      },
+    },
+  ],
+  __experimentalThemes: [
+```
+
+### Global Styles
+
+You can inject global styles into the theme's style bundle by shadowing `gatsby-theme-carbon/styles/_global.scss` in your project's `src` directory. This technique is especially useful for `node_module` dependencies that assume a single bundle (such as individual `carbon-components`).
+
+For your application's local styles, you can just import your style sheet [directly into a `gatsby-browser.js`](https://www.gatsbyjs.org/docs/global-css/#adding-global-styles-without-a-layout-component) file at the root of your project.
+
+### Additional font weights
+
+If needed, you can add support for additional Plex font weights. Don't forget to specify italics for the additional weights if needed.
+
+```js
+__experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+		// will get added to default [300, 400, 600]
+        additionalFontWeights: ['200', '200i]
+      },
+    },
+  ],
+```
+
+### 404 implementation
+
+1. Make a 404.js in your src/pages
+1. Import the 404 component from the theme
+1. Export the component and provide your own links
+1. If necessary, configure your server to route unknown routes to 404.html
+
+```jsx
+import React from 'react';
+import { FourOhFour } from 'gatsby-theme-carbon';
+
+const links = [
+  { href: '/components/markdown', text: 'Markdown' },
+  { href: '/components/Aside', text: 'Aside' },
+  { href: '/components/demo', text: 'Demo' },
+];
+
+const Custom404 = () => <FourOhFour links={links} />;
+
+export default Custom404;
+```
+
+### Image Compression
+
+You can enable WebP by passing `withWebp: true` or providing your own optimization level. See the gatsby-remark-images [plugin options](https://www.gatsbyjs.org/packages/gatsby-remark-images/#options).
+
+```js
+module.exports = {
+  siteMetadata: {
+    title: 'Gatsby Theme Carbon',
+  },
+  __experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        name: 'Gatsby Theme Carbon Starter',
+        shortName: 'Carbon Starter',
+        withWebp: true,
+      },
+    },
+  ],
+};
+```
+
+### Global Search
+
+The GlobalSearch component is disabled by default. If you'd like to implement search functionality, you'll need to follow these two steps:
+
+1. set the isSearchEnabled theme option to true
+
+```js
+  __experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        isSearchEnabled: true
+      },
+    },
+  ],
+```
+
+2. Shadow the example search implementation at `/src/util/hooks/useSearch.js`
+
+```jsx
+import { useEffect } from 'react';
+const useAlgoliaSearch = () => {
+  // ...
+};
+
+export default useAlgoliaSearch;
+```
+
+The example `useSearch` hook demonstrates implementing search with [Algolia](https://www.algolia.com/). Algolia is free for open source libraries. You can shadow this hook and replace it with your Algolia credentials or a library of your choosing.
 
 ## 🚀 Deployment
 

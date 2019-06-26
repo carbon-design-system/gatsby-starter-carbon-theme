@@ -6,11 +6,13 @@ title: Markdown
 
 These are the built in components that you'll have access to simply by using markdown. The whitespace around these components **is significant**. If you encounter any errors, make sure you format the markdown and surounding space properly.
 
+For most pages, we recommend starting with a `PageDescription` followed by `AnchorLinks` if the content is long enough.
+
 </PageDescription>
 
 <AnchorLinks>
   <AnchorLink>Text decoration</AnchorLink>
-  <AnchorLink to="#h1">Headers</AnchorLink>
+  <AnchorLink>Headers</AnchorLink>
   <AnchorLink>Lists</AnchorLink>
   <AnchorLink>Links</AnchorLink>
   <AnchorLink>Images</AnchorLink>
@@ -35,7 +37,9 @@ Combined emphasis with **asterisks and _underscores_**.
 Strikethrough uses two tildes. ~~Scratch this.~~
 ```
 
-# H1
+## Headers
+
+**Note:** It's generally considered [best practice](https://webaim.org/techniques/semanticstructure/#contentstructure) to include just one `h1` heading per page. This heading signals the title or primary subject matter of the content to your audience. Because the title component generated at the top of each page already uses an `h1` heading, we recommend using `h2` tags for section headings within your content.
 
 ## H2
 
@@ -48,7 +52,6 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 #### Code
 
 ```
-# H1
 ## H2
 ### H3
 #### H4
@@ -59,24 +62,22 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 1. First ordered list item
 2. Another item
+   1. Nested items
 3. Actual numbers don't matter, just that it's a number
-4. And another item.
 
 - Unordered list can use asterisks
-
-* Or minuses
+- Or hyphens to create list items
 
 #### Code
 
 ```
 1. First ordered list item
 2. Another item
+   1. Nested items
 3. Actual numbers don't matter, just that it's a number
-4. And another item.
 
 * Unordered list can use asterisks
-
-- Or minuses
+- Or hyphens to create list items
 ```
 
 ## Links
@@ -175,14 +176,22 @@ Markdown | Less | Pretty
 1 | 2 | 3
 ```
 
-## Blockquotes
+## Blockquotes and citations
 
-> This is a Blockquote
+It is more important than ever that we own our own ethos, make palpable our brand values, and incorporate an instantly identifiable IBMness in everything we do.
+
+> This is a Blockquote.
 > This line is part of the same quote.
+
+> <cite>– Allison</cite>
+
+It is more important than ever that we own our own ethos, make palpable our brand values, and incorporate an instantly identifiable IBMness in everything we do.
 
 #### Code
 
 ```
-> This is a Blockquote
+> This is a Blockquote.
 > This line is part of the same quote.
+
+> <cite>– Allison</cite>
 ```

@@ -1,13 +1,14 @@
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Theme Carbon',
+    description: 'A Gatsby theme for the carbon design system',
+    keywords: 'gatsby,theme,carbon',
   },
   __experimentalThemes: [
     {
       resolve: 'gatsby-theme-carbon',
       options: {
-        name: 'Gatsby Theme Carbon Starter',
-        shortName: 'Carbon Starter',
+        additionalFontWeights: ['200', '200i'],
       },
     },
   ],

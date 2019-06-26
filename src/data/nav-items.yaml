@@ -26,6 +26,8 @@
       path: /components/ImageCard
     - title: Tabs
       path: /components/Tabs
+    - title: Video
+      path: /components/Video
 - title: Contributing
   pages:
     - title: Agreement
@@ -48,3 +50,6 @@
 - title: Resources
   pages:
     - path: /resources
+- title: Designers
+  pages:
+    - path: /designers

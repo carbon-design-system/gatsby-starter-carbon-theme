@@ -1,16 +1,12 @@
 {
   "name": "gatsby-starter-carbon-theme",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "license": "Apache-2.0",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
+    "dev": "gatsby develop",
+    "dev:clean": "gatsby clean && gatsby develop",
     "serve": "gatsby serve"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/carbon-design-system/gatsby-starter-carbon-theme"
   },
   "dependencies": {
     "gatsby": "^2.10.0",

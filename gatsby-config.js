@@ -4,11 +4,26 @@ module.exports = {
     description: 'A Gatsby theme for the carbon design system',
     keywords: 'gatsby,theme,carbon',
   },
+  plugins: [
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Carbon Design Gatsby Theme',
+        short_name: 'Gatsby Theme Carbon',
+        start_url: '/',
+        display: 'browser',
+      },
+    },
+  ],
   __experimentalThemes: [
     {
       resolve: 'gatsby-theme-carbon',
       options: {
-        additionalFontWeights: ['200', '200i'],
+        repository: {
+          baseUrl:
+            'https://github.com/carbon-design-system/gatsby-theme-carbon',
+          subDirectory: '/packages/example',
+        },
       },
     },
   ],

@@ -11,3 +11,4 @@ Get started using with the Gatsby Carbon theme which includes all configuration 
 - [Components](https://gatsby-theme-carbon.now.sh/components/markdown)
 - [Demo](https://gatsby-theme-carbon.now.sh/demo)
 - [Gallery](https://gatsby-theme-carbon.now.sh/gallery)
+- [Contributions](https://gatsby-theme-carbon.now.sh/contributions)

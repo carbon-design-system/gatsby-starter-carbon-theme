@@ -1,5 +1,6 @@
 ---
 title: Configuration
+description: Guide for configuring the theme's various settings
 ---
 
 <PageDescription>
@@ -9,16 +10,17 @@ Gatsby themes allow you to override configuration from the theme by defining the
 </PageDescription>
 
 <AnchorLinks>
-  <AnchorLink>Site Title and Description</AnchorLink>
+  <AnchorLink>Site title and description</AnchorLink>
   <AnchorLink>Manifest</AnchorLink>
   <AnchorLink>Favicon</AnchorLink>
   <AnchorLink>Additional font weights</AnchorLink>
-  <AnchorLink>Image Compression</AnchorLink>
-  <AnchorLink>Global Search</AnchorLink>
+  <AnchorLink>Image compression</AnchorLink>
+  <AnchorLink>Global search</AnchorLink>
   <AnchorLink>Edit on Github link</AnchorLink>
+  <AnchorLink>Other options</AnchorLink>
 </AnchorLinks>
 
-## Site Title and Description
+## Site title and description
 
 To add a title and description to each page, simply provide them to siteMetadata in your `gatsby-config.js` file.
 
@@ -94,61 +96,48 @@ plugins: [
   ],
 ```
 
-## Image Compression
+## Image compression
 
-You can enable WebP by passing `withWebp: true` or providing your own optimization level. See the gatsby-remark-images [plugin options](https://www.gatsbyjs.org/packages/gatsby-remark-images/#options).
+You can enable WebP by passing `withWebp: true` or providing your own optimization level. See the gatsby-remark-images [plugin options](https://www.gatsbyjs.org/packages/gatsby-remark-images/#options). You can also tweak the image quality based on design tolerance and performance thresholds.
 
 ```js
 module.exports = {
-  siteMetadata: {
-    title: 'Gatsby Theme Carbon',
-  },
   plugins: [
     {
       resolve: 'gatsby-theme-carbon',
       options: {
-        name: 'Gatsby Theme Carbon Starter',
-        shortName: 'Carbon Starter',
-        withWebp: true,
+        withWebp: true, // true, false (default false)
+        imageQuality: 50, // 0-100 (default 75)
       },
     },
   ],
 };
 ```
 
-## Global Search
+## Global search
 
-The GlobalSearch component is disabled by default. If you'd like to implement search functionality, you'll need to follow these two steps:
+Site-wide search is provided by the theme. The only requirement for a page to show up in the results is for it to have `title` set in the [frontmatter](/components/markdown#mdx-frontmatter).
+To render more helpful search results (and improve SEO), you'll want to make sure your pages have `description` set in the frontmatter as well.
 
-1. set the isSearchEnabled theme option to true
+Global search is enabled by default. To disable it, set the `isSearchEnabled` option to false.
 
 ```js
   plugins: [
     {
       resolve: 'gatsby-theme-carbon',
       options: {
-        isSearchEnabled: true
+        isSearchEnabled: false
       },
     },
   ],
 ```
 
-2. Shadow the example search implementation at `/src/util/hooks/useSearch.js`
-
-```jsx
-import { useEffect } from 'react';
-const useAlgoliaSearch = () => {
-  // ...
-};
-
-export default useAlgoliaSearch;
-```
-
-The example `useSearch` hook demonstrates implementing search with [Algolia](https://www.algolia.com/). Algolia is free for open source libraries. You can shadow this hook and replace it with your Algolia credentials or a library of your choosing.
+Under the hood, we use [Lunr](https://lunrjs.com/) to create our search index. If necessary, you tweak the search scoring algorithm and source nodes.
+To do so, provide your own [resolvers object](https://www.gatsbyjs.org/packages/gatsby-plugin-lunr/#getting-started) to the `lunrOptions` theme option.
 
 ## Edit on GitHub link
 
-To add a link to the bottom of each page that points to the current page source in GitHub, provide an `repository` object to `siteMetadata` in your `gatsby-config.js` file. You can provide a `baseUrl`, and if needed, the `subDirectory` where your site source lives.
+To add a link to the bottom of each page that points to the current page source in GitHub, provide a `repository` object to `siteMetadata` in your `gatsby-config.js` file. You can provide a `baseUrl`, and if needed, the `subDirectory` and `branch` where your site source lives.
 
 ```js
   plugins: [
@@ -158,7 +147,32 @@ To add a link to the bottom of each page that points to the current page source 
         repository: {
           baseUrl: 'https://github.com/carbon-design-system/gatsby-theme-carbon',
           subDirectory: '/packages/example',
+          branch: 'master',
         },
+      },
+    },
+  ],
+```
+
+## Other options
+
+- `additionalFontWeights` – add support for additional Plex font weights. Don't forget to specify italics for the additional weights if needed.
+- `mdxExtensions` – change the file extensions processed by `gatsby-mdx` (default ['.mdx', '.md'])
+- `titleType` – pick between four formats for the `<title>` element for your site. Here are the four options using this page as an example:
+
+  - `page`: "Configuration" (default)
+  - `site`: "Gatsby Theme Carbon"
+  - `append`: "Gatsby Theme Carbon – Configuration"
+  - `prepend`: "Configuration - Gatsby Theme Carbon"
+
+```js
+plugins: [
+    {
+      resolve: 'gatsby-theme-carbon',
+      options: {
+        additionalFontWeights: ['200', '200i'],
+        mdxExtensions: ['.mdx'],
+        titleType: 'append'
       },
     },
   ],

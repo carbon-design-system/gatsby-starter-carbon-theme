@@ -22,32 +22,40 @@
       path: /guides/navigation/sidebar
 - title: Components
   pages:
-    - title: Markdown
-      path: /components/markdown
-    - title: Grid
-      path: /components/Grid
     - title: Accordion
       path: /components/Accordion
-    - title: DoDontExample
-      path: /components/DoDontExample
+    - title: AnchorLinks
+      path: /components/AnchorLinks
+    - title: ArtDirection
+      path: /components/ArtDirection
+    - title: ArticleCard
+      path: /components/ArticleCard
+    - title: Aside
+      path: /components/Aside
     - title: Caption
       path: /components/Caption
     - title: Code blocks
       path: /components/code-blocks
-    - title: Aside
-      path: /components/Aside
-    - title: AnchorLinks
-      path: /components/AnchorLinks
+    - title: DoDontExample
+      path: /components/DoDontExample
+    - title: FeatureCard
+      path: /components/FeatureCard
+    - title: Grid
+      path: /components/Grid
+    - title: ImageCard
+      path: /components/ImageCard
+    - title: ImageGallery
+      path: /components/ImageGallery
+    - title: InlineNotification
+      path: /components/InlineNotification
+    - title: Markdown
+      path: /components/markdown
+    - title: MDX
+      path: /components/MDX
     - title: PageDescription
       path: /components/PageDescription
     - title: ResourceCard
       path: /components/ResourceCard
-    - title: ArticleCard
-      path: /components/ArticleCard
-    - title: FeatureCard
-      path: /components/FeatureCard
-    - title: ImageCard
-      path: /components/ImageCard
     - title: Tabs
       path: /components/Tabs
     - title: Video

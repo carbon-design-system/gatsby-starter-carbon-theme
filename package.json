@@ -1,16 +1,22 @@
 {
-  "name": "gatsby-starter-carbon-theme",
-  "version": "1.0.0",
-  "license": "Apache-2.0",
+  "name": "example",
+  "private": true,
+  "version": "1.20.0",
+  "license": "Apache 2.0",
   "scripts": {
+    "dev": "gatsby develop -H 0.0.0.0",
+    "dev:clean": "yarn clean && yarn develop",
     "build": "gatsby build",
-    "dev": "gatsby develop",
-    "dev:clean": "gatsby clean && gatsby develop",
-    "serve": "gatsby serve"
+    "build:clean": "yarn clean && gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "build:prefix": "gatsby build --prefix-paths",
+    "serve:prefix": "gatsby serve --prefix-paths",
+    "test:prefix": "yarn build:prefix && yarn serve:prefix"
   },
   "dependencies": {
-    "gatsby": "^2.13.39",
-    "gatsby-theme-carbon": "^1.16.2",
+    "gatsby": "^2.19.0",
+    "gatsby-theme-carbon": "^1.20.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }

@@ -38,6 +38,8 @@
       path: /components/code-blocks
     - title: DoDontExample
       path: /components/DoDontExample
+    - title: DoDontRow
+      path: /components/DoDontRow
     - title: FeatureCard
       path: /components/FeatureCard
     - title: Grid
@@ -50,6 +52,8 @@
       path: /components/InlineNotification
     - title: Markdown
       path: /components/markdown
+    - title: MediumPosts
+      path: /components/MediumPosts
     - title: MDX
       path: /components/MDX
     - title: PageDescription
@@ -58,5 +62,7 @@
       path: /components/ResourceCard
     - title: Tabs
       path: /components/Tabs
+    - title: Title
+      path: /components/Title
     - title: Video
       path: /components/Video

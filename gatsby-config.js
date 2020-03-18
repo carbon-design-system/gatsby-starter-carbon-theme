@@ -20,7 +20,6 @@ module.exports = {
     {
       resolve: 'gatsby-theme-carbon',
       options: {
-        isSearchEnabled: true,
         repository: {
           baseUrl:
             'https://github.com/carbon-design-system/gatsby-theme-carbon',

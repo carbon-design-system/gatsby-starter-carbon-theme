@@ -10,10 +10,14 @@
     "build:clean": "yarn clean && gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "start": "yarn run dev",
     "build:analyze": "ANALYZE=true yarn build"
   },
   "dependencies": {
     "gatsby": "^2.19.0",
+    "gatsby-plugin-sharp": "^2.5.5",
+    "gatsby-remark-images": "^3.2.3",
+    "gatsby-source-instagram": "^0.7.0",
     "gatsby-theme-carbon": "^1.22.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"

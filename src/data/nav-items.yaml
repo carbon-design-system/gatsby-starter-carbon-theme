@@ -10,6 +10,9 @@
 - title: Contributions
   pages:
     - path: /contributions
+- title: Instagram
+  pages:
+    - path: /Instagram
 - title: Guides
   pages:
     - title: Configuration

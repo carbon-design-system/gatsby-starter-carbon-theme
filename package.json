@@ -4,7 +4,7 @@
   "version": "1.27.0",
   "license": "Apache 2.0",
   "scripts": {
-    "dev": "GATSBY_EXPERIMENTAL_LAZY_DEVJS=true gatsby develop -H 0.0.0.0",
+    "dev": "gatsby develop -H 0.0.0.0",
     "dev:clean": "yarn clean && yarn dev",
     "build": "gatsby build",
     "build:clean": "yarn clean && gatsby build",

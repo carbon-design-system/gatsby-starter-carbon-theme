@@ -1,19 +1,19 @@
 {
   "name": "example",
   "private": true,
-  "version": "1.26.4",
+  "version": "1.27.0",
   "license": "Apache 2.0",
   "scripts": {
     "dev": "gatsby develop -H 0.0.0.0",
-    "dev:clean": "yarn clean && yarn develop",
+    "dev:clean": "yarn clean && yarn dev",
     "build": "gatsby build",
     "build:clean": "yarn clean && gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "^2.20.4",
-    "gatsby-theme-carbon": "^1.26.4",
+    "gatsby": "^2.24.14",
+    "gatsby-theme-carbon": "^1.27.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }

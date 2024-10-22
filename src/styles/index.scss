@@ -3,7 +3,7 @@
 #gatsby-focus-wrapper {
   padding-top: 4.5rem;
 
-  @include breakpoint('md') {
+  @include breakpoint("md") {
     padding-top: $spacing-07;
   }
 }

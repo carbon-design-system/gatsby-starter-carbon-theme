@@ -1,9 +1,6 @@
 - title: Getting started
   pages:
     - path: /getting-started
-- title: Demo
-  pages:
-    - path: /demo
 - title: Gallery
   pages:
     - path: /gallery
@@ -30,6 +27,10 @@
       path: /guides/styling
     - title: v2.0 Migration
       path: /guides/v2-migration
+    - title: v3.0 Migration
+      path: /guides/v3-migration
+    - title: v4.0 Migration
+      path: /guides/v4-migration
 - title: Components
   pages:
     - title: Accordion
@@ -50,6 +51,10 @@
       path: /components/DoDontExample
     - title: DoDontRow
       path: /components/DoDontRow
+    - title: ExpressiveList
+      path: /components/ExpressiveList
+    - title: ExpressiveListContainer
+      path: /components/ExpressiveListContainer
     - title: FeatureCard
       path: /components/FeatureCard
     - title: FeedbackDialog

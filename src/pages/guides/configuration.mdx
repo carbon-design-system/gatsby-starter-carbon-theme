@@ -298,7 +298,7 @@ work, you can try calling the (underlying) remark plugin directly using the
 
 For the below markdown snippet:
 
-````
+````mdx
 ```mermaid
 graph LR
 install[Install Plugin]
@@ -346,7 +346,8 @@ project:
 
 For the below markdown snippet:
 
-```
+{/* prettier-ignore */}
+```mdx
 +-------+----------+------+
 | Table Headings   | Here |
 +-------+----------+------+
@@ -377,3 +378,15 @@ array in the theme options.
     },
   ],
 ```
+
+## Adding new MDX layouts
+
+This would need to be added as custom components following this
+[Layout component docs](https://www.gatsbyjs.com/docs/how-to/routing/layout-components)
+outlined by Gatsby.
+
+Note that the layouts do not inherit from theme default. Custom layouts start
+from a clean slate. If you want to iterate on the Carbon template, copy
+`/gatsby-theme-carbon/src/components/Layouts/Default.js` to your custom template
+as a starting point. When doing this, you may also need to change the import
+paths to the correct location.

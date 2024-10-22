@@ -1,4 +1,5 @@
 module.exports = {
+  trailingSlash: `always`,
   siteMetadata: {
     title: 'Gatsby Theme Carbon',
     description: 'A Gatsby theme for the carbon design system',
@@ -13,8 +14,6 @@ module.exports = {
         icon: 'src/images/favicon.svg',
         short_name: 'Gatsby Theme Carbon',
         start_url: '/',
-        background_color: '#ffffff',
-        theme_color: '#161616',
         display: 'browser',
       },
     },

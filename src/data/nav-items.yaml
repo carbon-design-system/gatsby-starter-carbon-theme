@@ -4,6 +4,20 @@
 - title: Demo
   pages:
     - path: /demo
+- title: Demo level 1
+  pages:
+    - title: Demo page 1
+      path: /demo-level-1/demo-page-1
+    - title: Demo page 2
+      path: /demo-level-1/demo-page-2
+    - title: Demo level 2
+      pages:
+        - title: Demo page 1
+          path: /demo-level-1/demo-level-2/demo-page-1
+        - title: Demo page 2
+          path: /demo-level-1/demo-level-2/demo-page-2/tab-1
+        - title: Demo page 3
+          path: /demo-level-1/demo-level-2/demo-page-3
 - title: Gallery
   pages:
     - path: /gallery
@@ -30,6 +44,10 @@
       path: /guides/styling
     - title: v2.0 Migration
       path: /guides/v2-migration
+    - title: v3.0 Migration
+      path: /guides/v3-migration
+    - title: v4.0 Migration
+      path: /guides/v4-migration
 - title: Components
   pages:
     - title: Accordion
@@ -50,6 +68,10 @@
       path: /components/DoDontExample
     - title: DoDontRow
       path: /components/DoDontRow
+    - title: ExpressiveList
+      path: /components/ExpressiveList
+    - title: ExpressiveListContainer
+      path: /components/ExpressiveListContainer
     - title: FeatureCard
       path: /components/FeatureCard
     - title: FeedbackDialog

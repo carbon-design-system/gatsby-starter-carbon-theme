@@ -1,5 +1,5 @@
-import React from 'react';
-import Footer from 'gatsby-theme-carbon/src/components/Footer';
+import React from "react";
+import Footer from "gatsby-theme-carbon/src/components/Footer";
 
 const Content = ({ buildTime }) => (
   <>
@@ -25,16 +25,14 @@ const Content = ({ buildTime }) => (
 
 const links = {
   firstCol: [
-    {
-      href: 'https://www.ibm.com/contact',
-      linkText: 'Contact IBM',
-    },
-    { href: 'https://www.ibm.com/privacy', linkText: 'Privacy' },
-    { href: 'https://www.ibm.com/legal', linkText: 'Terms of use' },
+    { href: "https://ibm.com/design", linkText: "Shadowed link" },
+    { href: "https://ibm.com/design", linkText: "Shadowed link" },
+    { href: "https://ibm.com/design", linkText: "Shadowed link" },
   ],
   secondCol: [
-    { href: 'https://www.ibm.com/able', linkText: 'Accessibility' },
-    { href: 'https://www.ibm.com/', linkText: 'IBM.com' },
+    { href: "https://ibm.com/design", linkText: "Shadowed link" },
+    { href: "https://ibm.com/design", linkText: "Shadowed link" },
+    { href: "https://ibm.com/design", linkText: "Shadowed link" },
   ],
 };
 
